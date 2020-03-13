@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <div class="video-background">
+        <iframe class="videoContainer__video" height="100%" width="130%" src="https://www.youtube.com/embed/HWurFwhu09s?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1" frameborder="0"></iframe>
+   </div>
+  <audio id="loading" autoplay loop ><source src="music/loading.ogg" type="audio/ogg"></audio>
+
+
+<div class="box-gauche">
+  <div class="box-gauche-infos">
+  <img  class="img-header"src="img/logo.png" height="200" width="200"></img>
+  <h3 class="name">NOM DU SERVEUR</h3>
+  <div class="separator1"></div>
+  <h3 class="name">Joueurs max:&nbsp;<span class="color-name">128</span></h3>
+  <div class="separator1"></div>
+  <h3 class="name">Gamemode:&nbsp;<span class="color-name">Roleplay</span></h3>
+  <div class="separator1"></div>
+  <h3 class="name">Discord:&nbsp;<span class="color-name">J5HFpkF</span></h3>
+  <div class="separator1"></div>
+  <h3 class="name">Site Web:&nbsp;<span class="color-name">xlife.fr</span></h3>
+  <div class="separator1"></div>
+</div>
+</div>
+<div class="box-gauche-rgb">
+  <div class="box-gauche-infos-rgb">
+  <div class="rgb"></div>
+</div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
+
+		<script>
+    var play = false;
+    var myAudio = document.getElementById("loading");
+    
+    myAudio.volume = 0.1;
+	
+	
+    function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+      return false;
+    }
+    window.addEventListener("keydown", onKeyDown, false);
+    </script>
+  
+</body>
+</html>
